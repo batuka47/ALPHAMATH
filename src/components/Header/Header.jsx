@@ -11,10 +11,14 @@ function Header(){
     return (
         <div className='Con' class="flex flex-row justify-between items-center w-full h-16 ">
             <div className='logo' class="w-3/25 flex content-center items-center">
-                <Logo/>
+                <Link to="/">
+                    <Logo/>
+                </Link> 
             </div>
             <div className='BtnCon' class="w-3/5 flex flex-row gap-8 items-center">
-                <button class="h-8 min-w-20 border-none text-stone-950  bg-white text-xl font-semibold flex justify-center items-center gap-1">Нүүр</button>
+                <Link to="/">
+                    <button class="h-8 min-w-20 border-none text-stone-950  bg-white text-xl font-semibold flex justify-center items-center gap-1">Нүүр</button>
+                </Link>
                 <button class="h-8 min-w-20 border-none text-stone-950  bg-white text-xl font-semibold flex justify-center items-center gap-1">Материал</button>
                 <Link to="/EYSH">
                     <button class="h-8 min-w-20 border-none text-stone-950  bg-white text-xl font-semibold flex justify-center items-center gap-1">ЭЕШ</button>

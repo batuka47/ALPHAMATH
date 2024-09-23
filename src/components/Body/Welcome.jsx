@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import { Link } from 'react-router-dom';
 function Welcome() {
 
   return (
@@ -10,7 +10,9 @@ function Welcome() {
         Математикийн ЭЕШ-ийн дүнгээ EYSH.mn-ээр үнэгүй сайжруулаарай.
       </h1>
       <div class="ml-96">
+      <Link to="/EYSH">
         <button class="absolute w-80 h-20 text-5xl text-center mt-72 ml-8 rounded-3xl text-white bg-gradient-to-r from-violet-700 to-emerald-400">Эхлэх</button>
+      </Link>
       </div>
     </div>
   )
