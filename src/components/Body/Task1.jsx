@@ -1,6 +1,12 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import RadioButton from './RadioBtn'
 function Task1(props){
+    const [selectedValue, setSelectedValue] = useState('HTML');
+
+    const handleChange = (event) => {
+      setSelectedValue(event.target.value);
+    };
     return (
        <div class="w-full flex flex-col ">
             <div class="w-full flex flex-col items-center">
@@ -21,6 +27,86 @@ function Task1(props){
             <p class="font-semibold text-xl" >
                 1. 4-т хуваагдах тоог олоорой
             </p>
+            <div className="p-4 gap-12">
+                <RadioButton
+                    label="A. 2418 "
+                    name="language"
+                    value="A. 2418 "
+                    checked={selectedValue === 'A. 2418 '}
+                    onChange={handleChange}
+                />
+                <RadioButton
+                    label="B. 5834"
+                    name="language"
+                    value="B. 5834"
+                    checked={selectedValue === 'B. 5834'}
+                    onChange={handleChange}
+                />
+                <RadioButton
+                    label="C. 6430"
+                    name="language"
+                    value="C. 6430"
+                    checked={selectedValue === 'C. 6430'}
+                    onChange={handleChange}
+                />
+                <RadioButton
+                    label="D. 4862"
+                    name="language"
+                    value="D. 4862"
+                    checked={selectedValue === 'D. 4862'}
+                    onChange={handleChange}
+                />
+                <RadioButton
+                    label="E. 1356"
+                    name="language"
+                    value="E. 1356"
+                    checked={selectedValue === 'E. 1356'}
+                    onChange={handleChange}
+                />
+            </div>
+            <p class="font-semibold text-xl" >
+            2. Нэг шагайг 2 удаа орхиход хонь буусан тоог 𝑋 <br/>
+                санамсаргүй хувьсагчаар сонгож, магадлалын <br />
+                тархалтыг баганан диаграммаар үзүүлэв. 𝑃(𝑋 ≥ 1) <br />
+                магадлалыг ол. 
+            </p>
+            <div className="p-4 gap-12">
+                <RadioButton
+                    label="A. 2418 "
+                    name="language"
+                    value="A. 2418 "
+                    checked={selectedValue === 'A. 2418 '}
+                    onChange={handleChange}
+                />
+                <RadioButton
+                    label="B. 5834"
+                    name="language"
+                    value="B. 5834"
+                    checked={selectedValue === 'B. 5834'}
+                    onChange={handleChange}
+                />
+                <RadioButton
+                    label="C. 6430"
+                    name="language"
+                    value="C. 6430"
+                    checked={selectedValue === 'C. 6430'}
+                    onChange={handleChange}
+                />
+                <RadioButton
+                    label="D. 4862"
+                    name="language"
+                    value="D. 4862"
+                    checked={selectedValue === 'D. 4862'}
+                    onChange={handleChange}
+                />
+                <RadioButton
+                    label="E. 1356"
+                    name="language"
+                    value="E. 1356"
+                    checked={selectedValue === 'E. 1356'}
+                    onChange={handleChange}
+                />
+            </div>
        </div>
     )
 }
