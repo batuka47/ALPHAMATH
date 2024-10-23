@@ -1,13 +1,116 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import RadioButton from './RadioBtn'
+import Test from './Test';
 import parse from 'html-react-parser';
-function Task1(props){
+function Task1(prop){
     const [selectedValue, setSelectedValue] = useState('');
 
     const handleChange = (event) => {
       setSelectedValue(event.target.value);
     };
+    const props = [
+        {
+            id: "1",
+            text:'4-т хуваагдах тоог олоорой',
+            labelA:'2418',
+            labelB:'5834',
+            labelC:'6430',
+            labelD:'4862',
+            labelE:'1356'
+        },
+        {
+            id: "2",
+            text:`<p>
+                    Нэг шагайг 2 удаа орхиход хонь буусан тоог 𝑋 <br/>
+                    санамсаргүй хувьсагчаар сонгож, магадлалын <br />
+                    тархалтыг баганан диаграммаар үзүүлэв. 𝑃(𝑋 ≥ 1) <br />
+                     магадлалыг ол. 
+                    </p>`,       
+            labelA:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac>
+                    <mn>21</mn><mn>25</mn></mfrac><annotation encoding="application/x-tex">\frac{21}{25}
+                    </annotation></semantics></math></em>
+                    </p>`,
+            labelB:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac>
+                    <mn>12</mn><mn>25</mn></mfrac><annotation encoding="application/x-tex">\frac{12}{25}
+                    </annotation></semantics></math></em>
+                    </p>`,
+            labelC:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac>
+                    <mn>4</mn><mn>25</mn></mfrac><annotation encoding="application/x-tex">\frac{4}{25}
+                    </annotation></semantics></math></em>
+                    </p>`,
+            labelD:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac>
+                    <mn>16</mn><mn>25</mn></mfrac><annotation encoding="application/x-tex">\frac{16}{25}
+                    </annotation></semantics></math></em>
+                    </p>`,
+            labelE:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac>
+                    <mn>9</mn><mn>25</mn></mfrac><annotation encoding="application/x-tex">\frac{9}{25}
+                    </annotation></semantics></math></em>
+                    </p>`
+        },
+        {
+            id: "3",
+            text:`
+                    <p><em><math display="block" class="w-28 font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>4</mn><mn>9</mn></mfrac><mi>x</mi><mo>+</mo><mn>1</mn><mfrac><mn>5</mn><mn>6</mn></mfrac><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\frac{4}{9}x+1\frac{5}{6}=2</annotation></semantics></math></em></p>
+                    тэгшитгэл бод.`,
+            labelA:`<p class="flex">
+                    -2<em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>5</mn><mn>8</mn></mfrac><annotation encoding="application/x-tex">\frac{5}{8}</annotation></semantics></math></em>
+                    </p>`,
+            labelB:`<p class="flex">
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>5</mn><mn>8</mn></mfrac><annotation encoding="application/x-tex">\frac{5}{8}</annotation></semantics></math></em>
+                    </p>`,
+            labelC:`<p class="flex">
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>3</mn><mn>8</mn></mfrac><annotation encoding="application/x-tex">\frac{3}{8}</annotation></semantics></math></em>
+                    </p>`,
+            labelD:`<p class="flex">
+                    2<em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>5</mn><mn>8</mn></mfrac><annotation encoding="application/x-tex">\frac{5}{8}</annotation></semantics></math></em>
+                    </p>`,
+            labelE:`<p class="flex">
+                    4<em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>24</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{24}</annotation></semantics></math></em>
+                    </p>`
+        },
+        {
+            id: "4",
+            text:`Үйлдлийг гүйцэтгэ. <p><em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mroot><msup><mn>4</mn><mn>2</mn></msup><mn>3</mn></mroot><mo>*</mo><msup><mn>2</mn><mfrac><mn>2</mn><mn>3</mn></mfrac></msup></mrow><annotation encoding="application/x-tex">\sqrt[3]{4^2}*2^\frac{2}{3}</annotation></semantics></math></em></p>`,
+            labelA:`4`,
+            labelB:`<p><em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mfrac><mn>3</mn><mn>8</mn></mfrac></msup><annotation encoding="application/x-tex">2^\frac{3}{8}</annotation></semantics></math></em></p>`,
+            labelC:`<p><em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mfrac><mn>3</mn><mn>8</mn></mfrac></msup><annotation encoding="application/x-tex">2^\frac{3}{8}</annotation></semantics></math></em></p>`,
+            labelD:`<p><em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mfrac><mn>11</mn><mn>3</mn></mfrac></msup><annotation encoding="application/x-tex">2^\frac{11}{3}</annotation></semantics></math></em></p>`,
+            labelE:`8`
+        },
+        {
+            id: "5",
+            text:``,
+            labelA:``,
+            labelB:``,
+            labelC:``,
+            labelD:``,
+            labelE:``
+        },
+        {
+            id: "",
+            text:``,
+            labelA:``,
+            labelB:``,
+            labelC:``,
+            labelD:``,
+            labelE:``
+        },
+        {
+            id: "",
+            text:``,
+            labelA:``,
+            labelB:``,
+            labelC:``,
+            labelD:``,
+            labelE:``
+        },
+      ]
     return (
        <div class="w-full flex flex-col ">
             <div class="w-full flex flex-col items-center">
@@ -25,180 +128,18 @@ function Task1(props){
             <h3 class="font-bold text-xl mt-8">
                 Бодлого 1-ээс 8 тус бүр 1 оноотой. 
             </h3>
-            <p class="font-semibold text-xl" >
-                1. 4-т хуваагдах тоог олоорой
-            </p>
-            <div className="p-4 gap-12">
-                <RadioButton
-                    label="2418"
-                    name="question1"
-                    value="A"
-                    checked={selectedValue === 'A'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label="5834"
-                    name="question1"
-                    value="B"
-                    checked={selectedValue === 'B'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label="6430"
-                    name="question1"
-                    value="C"
-                    checked={selectedValue === 'C'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label="4862"
-                    name="question1"
-                    value="D"
-                    checked={selectedValue === 'D'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label="1356"
-                    name="question1"
-                    value="E"
-                    checked={selectedValue === 'E'}
-                    onChange={handleChange}
-                />
-            </div>
-            <p class="font-semibold text-xl" >
-            2. Нэг шагайг 2 удаа орхиход хонь буусан тоог 𝑋 <br/>
-                санамсаргүй хувьсагчаар сонгож, магадлалын <br />
-                тархалтыг баганан диаграммаар үзүүлэв. 𝑃(𝑋 ≥ 1) <br />
-                магадлалыг ол. 
-            </p>
-            <div className="p-4 gap-12">
-                <RadioButton
-                    label='<p>
-                            <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac>
-                            <mn>21</mn><mn>25</mn></mfrac><annotation encoding="application/x-tex">\frac{21}{25}
-                            </annotation></semantics></math></em>
-                            </p>'
-                    name="question2"
-                    value="A"        
-                    checked={selectedValue === 'A'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label='<p>
-                            <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac>
-                            <mn>12</mn><mn>25</mn></mfrac><annotation encoding="application/x-tex">\frac{12}{25}
-                            </annotation></semantics></math></em>
-                            </p>'
-                    name="question2"
-                    value="B" 
-                    checked={selectedValue === 'B'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label='<p>
-                            <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac>
-                            <mn>4</mn><mn>25</mn></mfrac><annotation encoding="application/x-tex">\frac{4}{25}
-                            </annotation></semantics></math></em>
-                            </p>'
-                    name="question2"
-                    value="C" 
-                    checked={selectedValue === 'C'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label='<p>
-                            <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac>
-                            <mn>16</mn><mn>25</mn></mfrac><annotation encoding="application/x-tex">\frac{16}{25}
-                            </annotation></semantics></math></em>
-                            </p>'
-                    name="question2"
-                    value="D" 
-                    checked={selectedValue === 'D'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label='<p>
-                            <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac>
-                            <mn>9</mn><mn>25</mn></mfrac><annotation encoding="application/x-tex">\frac{9}{25}
-                            </annotation></semantics></math></em>
-                            </p>'
-                    name="question2"
-                    value="E" 
-                    checked={selectedValue === 'E'}
-                    onChange={handleChange}
-                />
-            </div>
-            <p className="font-semibold text-xl flex flex-row gap-2">
-                3. {parse(`<p><em><math display="block" class="w-24 font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>4</mn><mn>9</mn></mfrac><mi>x</mi><mo>+</mo><mn>1</mn><mfrac><mn>5</mn><mn>6</mn></mfrac><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\frac{4}{9}x+1\frac{5}{6}=2</annotation></semantics></math></em></p>`)}
-                тэгшитгэл бод.
-            </p>
-            <div className="p-4 gap-12">
-                <RadioButton
-                    label=' <p class="flex">
-                            -2<em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>5</mn><mn>8</mn></mfrac><annotation encoding="application/x-tex">\frac{5}{8}</annotation></semantics></math></em>
-                            </p>'
-                    checked={selectedValue === 'A'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label='<p class="flex">
-                            <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>5</mn><mn>8</mn></mfrac><annotation encoding="application/x-tex">\frac{5}{8}</annotation></semantics></math></em>
-                            </p>'
-                    checked={selectedValue === 'B'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label='<p class="flex">
-                            <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>3</mn><mn>8</mn></mfrac><annotation encoding="application/x-tex">\frac{3}{8}</annotation></semantics></math></em>
-                            </p>'
-                    checked={selectedValue === 'C'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label='<p class="flex">
-                            2<em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>5</mn><mn>8</mn></mfrac><annotation encoding="application/x-tex">\frac{5}{8}</annotation></semantics></math></em>
-                            </p>'
-                    checked={selectedValue === 'D'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label='<p class="flex">
-                            4<em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>24</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{24}</annotation></semantics></math></em>
-                            </p>'
-                    checked={selectedValue === 'E'}
-                    onChange={handleChange}
-                />
-            </div>
-            <p class="font-semibold text-xl flex flex-row" >
-                4. Үйлдлийг гүйцэтгэ. {parse('<p><em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mroot><msup><mn>4</mn><mn>2</mn></msup><mn>3</mn></mroot><mo>*</mo><msup><mn>2</mn><mfrac><mn>2</mn><mn>3</mn></mfrac></msup></mrow><annotation encoding="application/x-tex">\sqrt[3]{4^2}*2^\frac{2}{3}</annotation></semantics></math></em></p>')}
-            </p>
-            <div className="p-4 gap-12">
-                <RadioButton
-                    label='4'
-                    checked={selectedValue === 'A'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label='<p><em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mfrac><mn>3</mn><mn>8</mn></mfrac></msup><annotation encoding="application/x-tex">2^\frac{3}{8}</annotation></semantics></math></em></p>'
-                    checked={selectedValue === 'B'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label='<p><em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mfrac><mn>5</mn><mn>3</mn></mfrac></msup><annotation encoding="application/x-tex">2^\frac{5}{3}</annotation></semantics></math></em></p>'
-                    checked={selectedValue === 'C'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label='<p><em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>2</mn><mfrac><mn>11</mn><mn>3</mn></mfrac></msup><annotation encoding="application/x-tex">2^\frac{11}{3}</annotation></semantics></math></em></p>'
-                    checked={selectedValue === 'D'}
-                    onChange={handleChange}
-                />
-                <RadioButton
-                    label='8'
-                    checked={selectedValue === 'E'}
-                    onChange={handleChange}
-                />
-            </div>
+            {
+                props.map((data)=>{
+                    return <Test text={data.text} id={data.id} labelA={data.labelA} labelB={data.labelB} labelC={data.labelC} labelD={data.labelD} labelE={data.labelE}/>
+                })
+            }
+            
+
+
+
+
+            
+            
             <p class="font-semibold text-xl flex flex-row" >
                 5. Зурагт үзүүлсэн 𝑂 цэгт төвтэй тойргийн шүргэгч 𝐵𝐴 <br />
                 бөгөөд 𝐵O хэрчим тойргийг 𝐶 цэгт огтлов. Хэрэв <br />

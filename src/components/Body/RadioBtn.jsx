@@ -12,7 +12,7 @@ const RadioButton = ({ label, name, value, checked, onChange }) => {
         onChange={onChange}
         className="form-radio text-blue-600 h-4 w-4"
       />
-      <span className="ml-2">{parse(label)}</span>
+      <span className="ml-2 flex justify-center items-center gap-1">{value}. {parse(label)}</span>
     </label>
   );
 };
