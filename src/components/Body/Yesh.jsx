@@ -1,14 +1,13 @@
 import { useState } from 'react'
-import '../App.css'
-import Header from '../components/Header/Header'
-import Fooder from '../components/Fooder/Fooder'
-import Task1 from '../components/Body/Task1'
-import Task2 from '../components/Body/Task2'
-function EYSH(){
+import { Link } from 'react-router-dom'
+import RadioButton from './RadioBtn'
+import Task1 from './Task1';
+import Task2 from './Task2';
+import parse from 'html-react-parser';
+function Task1(prop){
+    
     return (
-       <div className='body' class="flex items-center  min-h-100vh flex-col"  width="1200px">
-        <Header/>
-        <div class="w-full flex flex-col ">
+       <div class="w-full flex flex-col ">
             <div class="w-full flex flex-col items-center">
                 <div class="border-b-solid border-b-4 border-black w-full flex flex-row justify-between ">
                     <h1 class="font-bold text-2xl">2024он</h1>
@@ -32,8 +31,6 @@ function EYSH(){
             </h3>
             <Task2/>
        </div>
-        <Fooder/>
-       </div>
     )
 }
-export default EYSH
+export default Task1
