@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 
 const RadioButton = ({ label, name, value, checked, onChange }) => {
   return (
-    <label className="inline-flex items-center text-lg font-semibold gap-1 ml-12">
+    <label className="inline-flex items-center text-lg font-semibold gap-1 ml-12 p-2">
       <input
         type="radio"
         name={name}

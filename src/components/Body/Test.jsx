@@ -8,7 +8,7 @@ function Test(props) {
       setSelectedValue(event.target.value);
     };  
   return (
-    <div class="">
+    <div class="w-2/3">
         <p class="font-semibold text-xl mt-8 flex gap-1">
             {props.id}. 
             <p class="flex items-center">

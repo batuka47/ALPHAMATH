@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import RadioButton from './RadioBtn'
 import Test from './Test';
 import parse from 'html-react-parser';
-function Task1(prop){
+function Task2(prop){
     const [selectedValue, setSelectedValue] = useState('');
 
     const handleChange = (event) => {
@@ -76,55 +76,97 @@ function Task1(prop){
             labelA:`<p>
                     <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{2}</annotation></semantics></math></em>
                     </p>`,
-            labelB:``,
-            labelC:``,
-            labelD:``,
-            labelE:``
+            labelB:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{\sqrt{2}}{2}</annotation></semantics></math></em>
+                    </p>`,
+            labelC:`<p class="flex">
+                    -<em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><msqrt><mn>2</mn></msqrt><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{\sqrt{2}}{2}</annotation></semantics></math></em>
+                    </p>`,
+            labelD:`<p class="flex">
+                    -<em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><msqrt><mn>3</mn></msqrt><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{\sqrt{3}}{2}</annotation></semantics></math></em>
+                    </p>`,
+            labelE:`<p class="flex">
+                    -<em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{2}</annotation></semantics></math></em>
+                    </p>`
         },
         {
             id: "14",
-            text:``,
-            labelA:``,
-            labelB:``,
-            labelC:``,
-            labelD:``,
-            labelE:``
+            text:`Координатын хавтгайд 𝐴(−5, −2), 𝐵(5, 4), 𝐶(2, 𝑎)<br/>
+                    гурван цэг нэг шулуун дээр байх бол 𝑎 тоог ол.`,
+            labelA:`2.18`,
+            labelB:`2.25`,
+            labelC:`2.6`,
+            labelD:`2.2`,
+            labelE:`2.3`
         },
         {
             id: "15",
-            text:``,
-            labelA:``,
-            labelB:``,
-            labelC:``,
-            labelD:``,
-            labelE:``
+            text:`<p>
+                    <em><math display="block" class="font-semibold w-28" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mn>1</mn><mn>8</mn></msubsup><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><msqrt><mrow><mn>3</mn><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">\int_{1}^{8} \frac{dx}{\sqrt{3x+1}}</annotation></semantics></math></em>
+                    </p>тодорхой интеграл бод.`,
+            labelA:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>3</mn><mn>10</mn></mfrac><annotation encoding="application/x-tex">\frac{3}{10}</annotation></semantics></math></em>
+                    </p>`,
+            labelB:`6`,
+            labelC:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{2}</annotation></semantics></math></em>
+                    </p>`,
+            labelD:`26`,
+            labelE:`2`
         },
         {
             id: "16",
-            text:``,
-            labelA:``,
-            labelB:``,
-            labelC:``,
-            labelD:``,
-            labelE:``
+            text:`<p class="">
+                    <em><math display="block" class="font-semibold w-32" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>+</mo><mn>4</mn><mi>z</mi><mo>+</mo><mn>40</mn></mrow><annotation encoding="application/x-tex">z^{2}+4z+40</annotation></semantics></math></em>
+                    комплекс тоог ол</p> <span class="h-12 ml-[-36px]">ба хуурмаг хэсэг нь эерэг байх 𝑧</span>`,
+            labelA:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn><mo>+</mo><mn>6</mn><mi>i</mi></mrow><annotation encoding="application/x-tex">-2 +6i</annotation></semantics></math></em>
+                    </p>`,
+            labelB:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>±</mi><mn>2</mn><mo>+</mo><mn>6</mn><mi>i</mi></mrow><annotation encoding="application/x-tex">\pm2+6i</annotation></semantics></math></em>
+                    </p>`,
+            labelC:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>2</mn><mo>±</mo><mn>6</mn><mi>i</mi></mrow><annotation encoding="application/x-tex">-2 \pm6i</annotation></semantics></math></em>
+                    </p>`,
+            labelD:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>-</mo><mn>6</mn><mi>i</mi></mrow><annotation encoding="application/x-tex">2 -6i</annotation></semantics></math></em>
+                    </p>`,
+            labelE:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>+</mo><mn>6</mn><mi>i</mi></mrow><annotation encoding="application/x-tex">2 +6i</annotation></semantics></math></em>
+                    </p>`
         },
         {
             id: "17",
-            text:``,
-            labelA:``,
-            labelB:``,
-            labelC:``,
-            labelD:``,
-            labelE:``
+            text:`𝑋𝑋 санамсаргүй хувьсагчийн магадлалын тархалтыг <br/>
+                    хүснэгтээр харуулав. Математик дундаж 𝐸(𝑋) = 1.2 бол <br/>
+                    𝑝1, 𝑝2 магадлалын хувьд аль хамаарал үнэн бэ?`,
+            labelA:`𝑝1 − 𝑝2 = 0.6`,
+            labelB:`𝑝1 < 𝑝2`,
+            labelC:`𝑝2 − 𝑝1 = 0.4`,
+            labelD:`𝑝2 = 4𝑝1`,
+            labelE:`𝑝1 ∙ 𝑝2 = 1`
         },
         {
             id: "18",
-            text:``,
-            labelA:``,
-            labelB:``,
-            labelC:``,
-            labelD:``,
-            labelE:``
+            text:`Нэг цэгт төвтэй 4 ба 6 радиустай хоёр дугуйг дөрвөн <br/>
+                    тэнцүү хуваах диаметр татаж, хуваагдсан зарим хэсгийг <br/>
+                    будав. Том дугуйгаас санамсаргүй сонгосон цэг будсан <br/>
+                    хэсэгт байх магадлалыг ол`,
+            labelA:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>5</mn><mn>36</mn></mfrac><annotation encoding="application/x-tex">\frac{5}{36}</annotation></semantics></math></em>
+                    </p>`,
+            labelB:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>5</mn><mn>9</mn></mfrac><annotation encoding="application/x-tex">\frac{5}{9}</annotation></semantics></math></em>
+                    </p>`,
+            labelC:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>5</mn><mn>18</mn></mfrac><annotation encoding="application/x-tex">\frac{5}{18}</annotation></semantics></math></em>
+                    </p>`,
+            labelD:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>4</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{4}</annotation></semantics></math></em>
+                    </p>`,
+            labelE:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>6</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{6}</annotation></semantics></math></em>
+                    </p>`
         },
         {
             id: "19",
@@ -137,12 +179,14 @@ function Task1(prop){
         },
         {
             id: "20",
-            text:``,
-            labelA:``,
-            labelB:``,
-            labelC:``,
-            labelD:``,
-            labelE:``
+            text:`Барааны үнэ байгаа үнээсээ хоёр удаа дараалан тэнцүү <br/>
+                    хэдэн хувиар өсөхөд анхны үнээс 12.36% -иар өссөн <br/>
+                    байх вэ?`,
+            labelA:`6.18%`,
+            labelB:`6%`,
+            labelC:`6.2%`,
+            labelD:`6.25%`,
+            labelE:`5%`
         },
         {
             id: "21",
@@ -155,12 +199,24 @@ function Task1(prop){
         },
         {
             id: "22",
-            text:``,
-            labelA:``,
-            labelB:``,
-            labelC:``,
-            labelD:``,
-            labelE:``
+            text:`Талсууд дээр нь 1, 2, 3, 4, 5, 6 тоонуудыг нэг нэгээр нь <br/>
+                    бичсэн хоёр шоог орхиход буусан тоонуудын үржвэр 4-т <br/>
+                    хуваагдах магадлалыг ол.`,
+            labelA:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>7</mn><mn>12</mn></mfrac><annotation encoding="application/x-tex">\frac{7}{12}</annotation></semantics></math></em>
+                    </p>`,
+            labelB:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>4</mn><mn>9</mn></mfrac><annotation encoding="application/x-tex">\frac{4}{9}</annotation></semantics></math></em>
+                    </p>`,
+            labelC:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>11</mn><mn>18</mn></mfrac><annotation encoding="application/x-tex">\frac{11}{18}</annotation></semantics></math></em>
+                    </p>`,
+            labelD:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>7</mn><mn>18</mn></mfrac><annotation encoding="application/x-tex">\frac{7}{18}</annotation></semantics></math></em>
+                    </p>`,
+            labelE:`<p>
+                    <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>5</mn><mn>12</mn></mfrac><annotation encoding="application/x-tex">\frac{5}{12}</annotation></semantics></math></em>
+                    </p>`
         },
         {
             id: "23",
@@ -209,12 +265,15 @@ function Task1(prop){
         },
         {
             id: "28",
-            text:``,
-            labelA:``,
-            labelB:``,
-            labelC:``,
-            labelD:``,
-            labelE:``
+            text:`Зөвхөн 1, 2, 3 цифрүүд хэрэглээд дөрвөн оронтой <br/>
+                дараах нөхцөлийг хангах хичнээн тоо зохиож болох вэ? <br/>
+                Үүнд цифр бүрийг хоёроос ихгүй удаа хэрэглэнэ <br/>
+                (заримыг нь хэрэглэхгүй байсан ч болно).`, 
+            labelA:`78`,
+            labelB:`81`,
+            labelC:`36`,
+            labelD:`18`,
+            labelE:`54`
         },
         
         
@@ -226,12 +285,7 @@ function Task1(prop){
                     return <Test text={data.text} id={data.id} labelA={data.labelA} labelB={data.labelB} labelC={data.labelC} labelD={data.labelD} labelE={data.labelE}/>
                 })
             }
-            
-            <p>360 -ын <br /> олоорой.
-            <p><em><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>5</mn><mn>24</mn></mfrac><annotation encoding="application/x-tex">\frac{5}{24}</annotation></semantics></math></em></p>хэсэг нь 𝑥𝑥 тооны -тай тэнцүү бол 𝑥𝑥 тоог
-            <p><em><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>5</mn><mn>8</mn></mfrac><annotation encoding="application/x-tex">\frac{5}{8}</annotation></semantics></math></em></p>
-            </p>
        </div>
     )
 }
-export default Task1
+export default Task2
