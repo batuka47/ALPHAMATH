@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import RadioButton from './RadioBtn'
 import Test from './Test';
 import parse from 'html-react-parser';
 function Task2(prop){
@@ -170,12 +168,28 @@ function Task2(prop){
         },
         {
             id: "19",
-            text:``,
-            labelA:``,
-            labelB:``,
-            labelC:``,
-            labelD:``,
-            labelE:``
+            text:`<p>
+                <em><math display="block" class="font-semibold w-[180px]" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>d</mi><mi>y</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mi>s</mi><mi>i</mi><mi>n</mi><mi>x</mi><mo>−</mo><mi>s</mi><mi>i</mi><mi>n</mi><mn>3</mn><mi>x</mi></mrow><annotation encoding="application/x-tex">\frac{dy}{dx}=sinx-sin3x</annotation></semantics></math></em>
+                </p> байх
+                <p>
+                <em><math display="block" class="font-semibold w-28" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℳ</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>π</mi><mn>3</mn></mfrac><mo>;</mo><mfrac><mrow><mi>−</mi><mn>1</mn></mrow><mn>3</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathcal{M} \left( \frac{\pi}{3} ; \frac{-1}{3} \right)</annotation></semantics></math></em>
+                </p>цэгийг дайрах муруйг
+                олоорой.`,
+            labelA:`<p>
+            <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mo>cos</mo><mrow><mn>3</mn><mi>x</mi></mrow></mrow><mn>3</mn></mfrac><mo>+</mo><mo>cos</mo><mrow><mi>x</mi></mrow><mo>−</mo><mfrac><mn>7</mn><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">y=-\frac{\cos\left.3x\right.}{3} +\cos\left.x\right.- \frac{7}{6}</annotation></semantics></math></em></p>
+        </p>`,
+            labelB:`<p>
+            <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mo>cos</mo><mrow><mn>3</mn><mi>x</mi></mrow></mrow><mn>3</mn></mfrac><mo>−</mo><mo>cos</mo><mrow><mi>x</mi></mrow><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">y=-\frac{\cos\left.3x\right.}{3} +\cos\left.x\right.- \frac{7}{6}</annotation></semantics></math></em></p>
+        </p>`,
+            labelC:`<p>
+            <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mo>cos</mo><mrow><mn>3</mn><mi>x</mi></mrow></mrow><mn>3</mn></mfrac><mo>−</mo><mo>cos</mo><mrow><mi>x</mi></mrow><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">y=-\frac{\cos\left.3x\right.}{3} +\cos\left.x\right.- \frac{7}{6}</annotation></semantics></math></em></p>
+        </p>`,
+            labelD:`<p>
+            <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mo>cos</mo><mrow><mn>3</mn><mi>x</mi></mrow></mrow><mn>3</mn></mfrac><mo>+</mo><mo>cos</mo><mrow><mi>x</mi></mrow><mo>−</mo><mfrac><mn>5</mn><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">y=-\frac{\cos\left.3x\right.}{3} +\cos\left.x\right.- \frac{7}{6}</annotation></semantics></math></em></p>
+        </p>`,
+            labelE:`<p>
+            <em><math display="block" class="font-semibold" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mo>cos</mo><mrow><mn>3</mn><mi>x</mi></mrow></mrow><mn>3</mn></mfrac><mo>−</mo><mo>cos</mo><mrow><mi>x</mi></mrow><mo>−</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">y=-\frac{\cos\left.3x\right.}{3} +\cos\left.x\right.- \frac{7}{6}</annotation></semantics></math></em></p>
+        </p>`
         },
         {
             id: "20",
@@ -190,12 +204,15 @@ function Task2(prop){
         },
         {
             id: "21",
-            text:``,
-            labelA:``,
-            labelB:``,
-            labelC:``,
-            labelD:``,
-            labelE:``
+            text:`<p>
+                <em><math display="block" class="font-semibold w-4 h-4 mb-8" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>x</mi><mn>2</mn></msup><annotation encoding="application/x-tex">x^{2}</annotation></semantics></math></em>
+                </p>− 3𝑥𝑥 < 0 ба 2 − 𝑥𝑥 ≥ 0 тэнцэтгэл бишүүдийг нэгэн <br/>
+                зэрэг хангах шийдийн олонлогийг ол.`,
+            labelA:`]−∞, 0]`,
+            labelB:`]−∞, 0]`,
+            labelC:`]0, 3[`,
+            labelD:`]0, 2]`,
+            labelE:`]−∞, 0[ ∪ [2, 3[`
         },
         {
             id: "22",
@@ -220,12 +237,16 @@ function Task2(prop){
         },
         {
             id: "23",
-            text:``,
-            labelA:``,
-            labelB:``,
-            labelC:``,
-            labelD:``,
-            labelE:``
+            text:`<p>
+                <em><math display="block" class="font-semibold w-28" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mfrac><mrow><mi>c</mi><mi>x</mi><mo>+</mo><mn>3</mn></mrow><mrow><mi>x</mi><mo>+</mo><mi>b</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">y=\frac{cx+3}{x+b}</annotation></semantics></math></em>
+                </p>функцийн график нь (1, 2) цэгийг дайрах ба хэвтээ<br/>
+                асимптот нь 𝑦 = 3 шулуун бол босоо асимптотыг <br/>
+                ол.`,
+            labelA:`x = 3`,
+            labelB:`x = 2`,
+            labelC:`x = −3`,
+            labelD:`x = −2`,
+            labelE:`x = −1`
         },
         {
             id: "24",
@@ -238,7 +259,11 @@ function Task2(prop){
         },
         {
             id: "25",
-            text:``,
+            text:`<p>. Конусын байгуулагч суурийн хавтгайтай үүсгэх өнцгийн <br/>
+            синус
+            <em class=""><math display="block" class="font-semibold w-10" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>12</mn><mn>13</mn></mfrac><annotation encoding="application/x-tex">\frac{12}{13}</annotation></semantics></math></em>
+            байв. Конусын суурийн радиус 5 бол хажуу<br/>
+            гадаргуун талбайг ол.</p>`,
             labelA:``,
             labelB:``,
             labelC:``,

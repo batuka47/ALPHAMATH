@@ -1,10 +1,8 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import RadioButton from './RadioBtn'
 import Test from './Test';
 import parse from 'html-react-parser';
 function Task1(prop){
-    const [selectedValue, setSelectedValue] = useState('');
+        const [selectedValue, setSelectedValue] = useState('');
 
     const handleChange = (event) => {
       setSelectedValue(event.target.value);
